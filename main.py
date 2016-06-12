@@ -26,6 +26,7 @@ if len(args) == 2 and args[1] == "reset":
     f = open("total", "w")
     f.write("0\n")
     f.close()
+    print("You are now back at a total focus score of 0.")
     sys.exit(0)
 
 for i in range(random.randint(1, 6)):
