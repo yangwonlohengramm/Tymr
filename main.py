@@ -33,6 +33,11 @@ if len(args) == 2 and args[1] == "reset":
     print("You are now back at a total focus score of 0.")
     sys.exit(0)
 
+elif len(args) == 2 and args[1] == "display":
+    f = open("total", "r")
+    print("Your current focus score totals to %d." % total)
+    sys.exit(0)
+
 for i in range(random.randint(1, 6)):
     for j in range(5):
         print("Loading"+"."*j)
