@@ -4,6 +4,10 @@ import os.path
 from time import sleep
 import sys
 
+#####################
+# TODO: Undo resets #
+#####################
+
 motivate = ["You got this!", "Hang in there!"]
 better_luck = ["Better luck next time!", "Don't lose direction!"]
 
@@ -39,9 +43,11 @@ while True:
     print(">>> Please enter your command:")
     command = input().split()
 
+    #all ifs should have continues.
     if command[0] in ["man", "help", "about"]:
-        print(">>> The possible commands are:\n+ man\n+ help\n+ about\n+ reset\n+ min\n+ exit\nreset can also be used as a command argument")
+        print(">>> The possible commands are:\n+ man\n+ help\n+ about\n+ reset\n+ min\n+ exit\n+ display\nreset can also be used as a command argument")
         continue
+
     if command[0] == "exit":
         for i in range(random.randint(1, 4)):
             for j in range(5):
@@ -55,6 +61,10 @@ while True:
         f.write("0\n")
         f.close()
         print("You are now back at a total focus score of 0.")
+        continue
+
+    if command[0] == "display":
+        print("Your current focus score totals to %d." % total)
         continue
 
     if command[0] == "min":
