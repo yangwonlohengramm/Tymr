@@ -71,7 +71,7 @@ while True:
         try:
             current = 0
             while current < seconds:
-                sleep(.1)
+                sleep(60)
                 current += 60
                 num = int(current//60/minutes*20) # so it can't round() up to full bar when it's not
                 bar = "Progress: |"+"="*num+"-"*(20-num)+"|"
